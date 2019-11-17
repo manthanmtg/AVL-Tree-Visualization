@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<style>
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text { font: 12px sans-serif; }
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.visible
+{
+	display:block;
+}
+
+.invisible 
+{
+	display:none;
+}
+
+</style>
+<link rel="stylesheet" href="bootstrap.css" crossorigin="anonymous">
+</head>
+<body>
+<center>
+<h1>Design and Analysis of Algorithms Project</h1>
+<h3>Visualization of AVL Trees using Javascript</h3>
+<div style="width:30%;height:2%"  >
+<input type="text" class="form-control "  id="value"  value=""  autofocus placeholder="Enter a Value " size="45">
+<input type="text" class="form-control "  id="name"   value=""  autofocus placeholder="Enter Name " size="45">
+<input type="text" class="form-control "  id="SRN"  value=""  autofocus placeholder="Enter SRN " size="45">
+<input type="text" class="form-control "  id="Age"   value=""  autofocus placeholder="Enter Age " size="45">
+</div>
+<br>
+
+<div >
+<button type="button" class="btn btn-xs btn-dark" onclick="InsertNode();">Insert</button>
+<button type="button" class ="btn btn-xs btn-danger" onclick="DeleteNode();">Delete</button>
+<button type="button" class="btn btn-xs btn-success" onclick="SearchNode();">Search</button>
+<button type="button" class="btn btn-xs btn-info" onclick="Print(bst.inorder);">Inorder</button>
+<button type="button" class="btn btn-xs btn-primary" onclick="Print(bst.preorder);">Preorder</button>
+<button type="button" class="btn btn-xs btn-warning" onclick="Print(bst.postorder);">Postorder</button>
+<button type="button" class="btn btn-xs btn-dark"    onclick="disp()">Display Fields</button>
+<button type="button" class ="btn btn-xs btn-danger" onclick="hide();">Hide</button>
+<button type="button" class="btn btn-xs btn-success" onclick="print_bal_factor();">Balance Factor</button>
+</div>
+<br>
+<span id="msg"></span>
+</center>			
+
+<!-- load the d3.js library -->
+<script src="d3.min.js"></script>
+<script src="avl_code.js" charset="utf-8"></script>
+
+
+
+</body>
